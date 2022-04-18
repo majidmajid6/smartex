@@ -14,10 +14,8 @@ function Profileinput() {
             .then(res => res.json())
             .then(json =>{   
                 setBody(json);
-                console.log(body.id);
-
-
             })
+            
 
         fetch('http://localhost:3030/newprofile',{
             method: 'POST',

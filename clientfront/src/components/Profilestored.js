@@ -7,7 +7,6 @@ import React, {useEffect, useState} from 'react';
 
 function Profilestored () {
     const [profiles, setProfiles] = useState();
-    const [isloaded, setIsloaded] = useState(false)
 
     useEffect(() => {
 
@@ -15,8 +14,6 @@ function Profilestored () {
             .then(res => res.json())
             .then(json => {
                 setProfiles(json.result);
-                console.log(json.result);
-                setIsloaded(true);
             });
     },[profiles])
 
@@ -30,7 +27,7 @@ function Profilestored () {
             </div>
 
             <div className="list">
-                {profiles.map((profile) => (
+                {profiles?.map((profile) => (
                 <div className="detailslist" key={profile.id}>
                         <p>{profile.login}</p>
                         <p>{profile.gitid}</p>

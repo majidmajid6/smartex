@@ -55,11 +55,16 @@
 }
 
 .profilestored {
-    border-left: 1px solid  #504b4b ;
+    border: 1px solid  #504b4b ;
+    border-radius: 10px;
     height: 500px;
     width: 100%;
 
 
+}
+
+.headlist {
+    border-bottom: 1px solid #504b4b;
 }
 
 .headlist h2{
@@ -109,7 +114,9 @@
 
 .detailslist p {
     width: 25%;
-    /* border-bottom: 1px solid #d8d8d8;  */
-    
+}
+
+.profileselected {
+    margin-top: 100px;
 }
 
