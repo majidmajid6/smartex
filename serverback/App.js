@@ -9,35 +9,25 @@ const bcrypt = require("bcrypt");
 const app = express();
 
 
-
-//connect to our database
 db.connect((err) => {
     if (err) throw err;
 });
 
-//---------------------------/Middleware:
-//to use CP
 app.use(cookieParser());
 
-//this is to allow our api for cross origine resource sharing
 app.use(cors());
 
-//this is to allow our api for parsing json
 app.use(express.json());
 
-//this is to allow our api to recieve data from a client app
 app.use(express.urlencoded({}));
 
 
-// Ajouter Un Nouveau Utilisateur
 
-app.post("/newprofile", (req, res) => {
+app.post("/newscore", (req, res) => {
 
-    console.log(req.body.id);
-    let sql =`INSERT INTO profiles (login, gitid, node_id, created_at) VALUE ("${req.body.login}", "${req.body.id}", "${req.body.node_id}", "${req.body.created_at}")`;
+    let sql =`INSERT INTO profiles (login) VALUE ("${req.body.score}")`;
     db.query(sql, (err, results) => {
         if(err) {
-            
             console.log("insert error");
             res.send(err)
         }
@@ -47,36 +37,6 @@ app.post("/newprofile", (req, res) => {
 
     });   
 });
-
-
-app.get("/getprofiles", (req, res) => {
-    let sql = "SELECT * FROM profiles";
-    db.query(sql, (err, result) => {
-        if (err){
-            res.status(400).send(err);
-            return;
-        }
-        const data = JSON.stringify(result);
-        res.send({result});
-    });
-});
-
-
-
-app.get("/profileselected/:login1/:login2", (req, res) => {
-
-    let sql = `SELECT * FROM profiles WHERE login IN ("${req.params.login1}","${req.params.login2}")`;
-
-    db.query(sql, (err, result) => {
-        if (err) {
-            res.status(400).send(err);
-            return;
-        }
-        const data = JSON.stringify(result);
-        res.send({result});
-    });
-});
-
 
 
 app.listen(3030, () => {

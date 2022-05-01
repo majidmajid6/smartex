@@ -9,29 +9,31 @@ const Test1 = ({setpositive, positive, setnegative, negative}) => {
     let history = useHistory();
     const [answer, setAnswer] = useState("");
 
+
     const handleClick = () => {
-        const result = answer.localeCompare("happy");
+        const result = answer.localeCompare("srecan");
         
         if (result === 0){
             const count = positive + 1;
             setpositive(count);
 
         }
-        // else{
-        //     const count = ncounter + 1;
-        //     setNcounter(count);
-        //     console.log("incorrect");
-        // }
+        else{
+            const count = negative + 1;
+            setnegative(count);
+            console.log("incorrect");
+        }
 
         history.push("/test2");
 
     }
 
-    const handleKeypress = e => {
-        if (e.keyCode === 13) {
+    function handleKeyPress(e) {
+        if(e.key === "Enter"){
             handleClick();
+            console.log( "You pressed a key." )
         }
-    };
+    }
 
    
    
@@ -42,8 +44,8 @@ const Test1 = ({setpositive, positive, setnegative, negative}) => {
             <input  type="text"
                     value = {answer}
                     onChange = {(e)=>setAnswer(e.target.value)}
-                    onKeyPress={handleKeypress}
-            />
+                    onKeyPress={(e) => handleKeyPress(e)}
+                                />
             <button onClick={handleClick}>Let see</button>
             <p> 👍 {positive}/20                     👎{negative}/20</p>
         </div>

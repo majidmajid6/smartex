@@ -10,7 +10,7 @@ const Test8 = ({setpositive, positive, setnegative, negative}) => {
     const [answer, setAnswer] = useState("");
 
     const handleClick = () => {
-        const result = answer.localeCompare("speed limite");
+        const result = answer.localeCompare("ogranicenje brzine");
         
         if (result === 0){
             const count = positive + 1;
@@ -31,7 +31,12 @@ const Test8 = ({setpositive, positive, setnegative, negative}) => {
         }
     };
 
-   
+    function handleKeyPress(e) {
+        if(e.key === "Enter"){
+            handleClick();
+            console.log( "You pressed a key." )
+        }
+    }
    
     return (
         <div className="test1">
@@ -40,7 +45,7 @@ const Test8 = ({setpositive, positive, setnegative, negative}) => {
             <input  type="text"
                     value = {answer}
                     onChange = {(e)=>setAnswer(e.target.value)}
-                    onKeyPress={handleKeypress}
+                    onKeyPress={(e) => handleKeyPress(e)}
             />
             <button onClick={handleClick}>Let see</button>
             <p> 👍 {positive}/20                     👎{negative}/20</p>

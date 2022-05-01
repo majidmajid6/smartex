@@ -12,6 +12,7 @@ import Test5 from './components/Test5';
 import Test6 from './components/Test6';
 import Test7 from './components/Test7';
 import Test8 from './components/Test8';
+import Fin from './components/Fin';
 import Notfound from './components/Notfound';
 
 
@@ -60,6 +61,10 @@ function App() {
 
                         <Route exact path="/test8">
                             <Test8 setpositive={setpositive} positive={positive} setnegative={setnegative} negative={negative}/>
+                        </Route>
+
+                        <Route exact path="/fin">
+                            <Fin positive={positive} negative={negative}/>
                         </Route>
                         
 
