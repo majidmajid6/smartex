@@ -2,121 +2,65 @@
 * {
     margin: 0;
     font-family: 'Quicksand';
-    color: rgb(109, 109, 109);
+    color:#333;
     text-decoration: none;
+}
+
+.App {
+    background-color: #FF6700;
+    height: 300px;
+    width: 600px;
 }
 
 .navbar {
-    height: 70px;
-    padding: 0px;
+    height: 50px;
+    width: 600px;
     display: flex;
+}
+
+.navbar img{
+    margin: 20px auto;
+}
+
+.test1 {
+    background-color: #FFFFFF;
+    width: 90%;
+    height: 210px;
+    border-radius: 5px;
     align-items: center;
-    max-width: 90%;
-    margin: 5px auto;
-    border-bottom: 1px solid #d8d8d8;   
-}
-
-.navbar img {
-    width: 17%;
-    height: 17%;
-
-}
-
-.links {
-    margin: auto;
-
-}
-
-.navbar a {
-    margin-left: -60px;
-    padding: 0px 50px;
-}
-
-.navbar a:hover {
-    color: #2396f3;
-}
-
-.content {
-    max-width: 100%;
-}
-.pages {
-    display: grid;
-    grid-template-columns: auto auto;
-    margin: 5px 60px;
-
-}
-
-.headlist {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    font-size: 10px;
-    align-items: center;
-   
-}
-
-.profilestored {
-    border: 1px solid  #504b4b ;
-    border-radius: 10px;
-    height: 500px;
-    width: 100%;
-
-
-}
-
-.headlist {
-    border-bottom: 1px solid #504b4b;
-}
-
-.headlist h2{
-    border-right: 1px solid #504b4b;
-    width: 78px;
-    padding: 5px;
-}
-
-
-.pages input {
-    display: block;
-    margin: 10px auto;
-    width: 50%;
-    border: 2px solid;
-    border-radius: 10px;
-    border-color: rgb(207, 207, 207);
-    padding: 10px;
-}
-
-.pages label {
-    display: block;
+    padding-top: 10px;
+    margin: 0px auto;
     text-align: center;
-    margin-top: 130px;
-    margin-left: auto;
-    font-size: 200%;
-} 
+}
 
-.pages button{
+.test1 img {
+    border-radius: 5px;
     display: block;
     margin: 5px auto;
-    width: 90px;
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 10px;
 }
 
-.detailslist {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    border-bottom: 1px solid #504b4b;
-    margin-top: 5px;
+.test1 input{
+    display: block;
+    margin: 5px auto;    
+    border: 0px;
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: -6px 6px 10px rgba(255, 103, 0, 0.3), 6px -6px 10px rgba(231, 190, 163, 0.3);
 }
 
-.detailslist p {
-    width: 25%;
+.test1 button {
+    display: block;
+    margin: 5px auto;
+    display: block;
+    width: 150px;
+    border: 0px;
+    border-radius: 5px;
+    color: #FFFF;
+    background-color: #FF6700;
 }
 
-.profileselected {
-    margin-top: 100px;
+.test1 p {
+    margin-top: 15px;
+    font-size: 8px;
+    color: #FF6700;
 }
-
