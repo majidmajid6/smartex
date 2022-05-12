@@ -22,6 +22,10 @@
     margin: 20px auto;
 }
 
+.logo {
+    margin: 0px auto;
+}
+
 .test1 {
     background-color: #FFFFFF;
     width: 90%;
@@ -64,65 +68,3 @@
     font-size: 8px;
     color: #FF6700;
 }
-
-
-/* @media all and (max-width: 480px) {
-    .App {
-        background-color: #FF6700;
-        height: 900px;
-        width: 4800px;
-    }
-    
-    .navbar {
-        height: 50px;
-        width: 480px;
-        display: flex;
-    }
-    
-    .navbar img{
-        margin: 20px auto;
-    }
-    
-    .test1 {
-        background-color: #FFFFFF;
-        width: 90%;
-        height: 210px;
-        border-radius: 5px;
-        align-items: center;
-        padding-top: 10px;
-        margin: 0px auto;
-        text-align: center;
-    }
-    
-    .test1 img {
-        border-radius: 5px;
-        display: block;
-        margin: 5px auto;
-    }
-    
-    .test1 input{
-        display: block;
-        margin: 5px auto;    
-        border: 0px;
-        width: 300px;
-        border-radius: 5px;
-        box-shadow: -6px 6px 10px rgba(255, 103, 0, 0.3), 6px -6px 10px rgba(231, 190, 163, 0.3);
-    }
-    
-    .test1 button {
-        display: block;
-        margin: 5px auto;
-        display: block;
-        width: 150px;
-        border: 0px;
-        border-radius: 5px;
-        color: #FFFF;
-        background-color: #FF6700;
-    }
-    
-    .test1 p {
-        margin-top: 15px;
-        font-size: 8px;
-        color: #FF6700;
-    }
-} */
