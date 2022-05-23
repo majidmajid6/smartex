@@ -3,7 +3,6 @@ const cors = require("cors");
 
 const cookieParser = require("cookie-parser");
 const db = require("./config/dbconfig");
-const bcrypt = require("bcrypt");
 
 
 const app = express();

@@ -23,7 +23,12 @@
 }
 
 .logo {
-    margin: 0px auto;
+    margin: 10px auto;
+}
+
+.logo img {
+    border-radius: 50px;
+    
 }
 
 .test1 {
