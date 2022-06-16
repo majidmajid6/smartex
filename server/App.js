@@ -39,5 +39,5 @@ app.post("/newscore", (req, res) => {
 
 
 app.listen(3030, () => {
-    console.log("listening at http://localhost:3030/");
+    console.log("listening at http://localhost:3030");
 });
