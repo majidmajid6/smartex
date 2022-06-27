@@ -1,11 +1,9 @@
-import React from 'react';
-import { useState } from 'react';
+import React, {useState} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 
 import Navbar from './components/Navbar';
-import Test1 from './components/Test1';
-import Fin from './components/Fin';
+import Home from './components/Home';
 import Notfound from './components/Notfound';
 
 
@@ -13,22 +11,17 @@ import Notfound from './components/Notfound';
 
 
 function App() {
-    const [score, setScore] = useState(0);
-
+    const [resto, setResto] = useState([])
 
 
     return (
         <Router>
             <div className="App">
-                <Navbar/>
-                <div className="content">
+                <Navbar setResto={setResto} />
+                <div>
                     <Switch>
                         <Route exact path="/">
-                            <Test1 setScore={setScore} />
-                        </Route>
-
-                        <Route exact path="/fin">
-                            <Fin score={score}/>
+                            <Home  resto= {resto}/>
                         </Route>
                         
 

@@ -1,40 +1,28 @@
 const express = require("express");
 const cors = require("cors");
-
 const cookieParser = require("cookie-parser");
-const db = require("./config/dbconfig");
-
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
 const app = express();
 
-
-db.connect((err) => {
-    if (err) throw err;
-});
-
 app.use(cookieParser());
-
 app.use(cors());
-
 app.use(express.json());
-
 app.use(express.urlencoded({}));
 
 
 
-app.post("/newscore", (req, res) => {
+app.get("/:code", async (req, res) => {
 
-    let sql =`INSERT INTO profiles (login) VALUE ("${req.body.score}")`;
-    db.query(sql, (err, results) => {
-        if(err) {
-            console.log("insert error");
-            res.send(err)
-        }
-        else {
-            res.send({ error: false, data: results, message: 'user has been updated successfully.' });
-        }
+    console.log("entrer dans api")
+    const data = await fetch(`https://uk.api.just-eat.io/restaurants/bypostcode/${req.params.code}`)
+    const restaurent = await data.json();
 
-    });   
+    if (restaurent){
+        res.send(restaurent.MetaData);
+    }
+     
+        
 });
 
 

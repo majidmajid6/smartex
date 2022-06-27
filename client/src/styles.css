@@ -1,75 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
 * {
-    margin: 0;
+    margin: 0px;
     font-family: 'Quicksand';
     color:#333;
-    text-decoration: none;
 }
 
-.App {
-    background-color: #FF6700;
-    height: 300px;
-    width: 600px;
+
+body {
+    min-height: 100vh;
 }
 
 .navbar {
-    height: 50px;
-    width: 600px;
+    background-color: rgb(190, 190, 190);
     display: flex;
+    height: 20vh;
 }
 
-.navbar img{
-    margin: 20px auto;
+.navbar img {
+    width: 15%;
+    height: 100%;
 }
 
-.logo {
-    margin: 10px auto;
+.navbar input {
+    width: 80%;
+    height: 6vh;
+    margin: 17vh auto;
+    border-radius: 10px;
+    border-style: 2px solid rgb(190, 190, 190);
 }
 
-.logo img {
-    border-radius: 50px;
-    
+
+.home {
+    background-color: rgb(255, 103, 32);
+    min-height: 80vh;
+    inline-size: min-content;
 }
 
-.test1 {
-    background-color: #FFFFFF;
-    width: 90%;
-    height: 210px;
-    border-radius: 5px;
+.list {
+    position: absolute;
+    border-radius: 10px;
+    margin: 10vh 2.5vh;
+    min-height: 65vh;
+    max-width: 95%;
+}
+
+.card {
+    border: 2px solid rgb(190, 190, 190);
+    background-color: seashell;
+    border-radius: 10px;
+    width: 90vw;
+    margin: 3px;
+    padding: 5px;
+    display: flex;
     align-items: center;
-    padding-top: 10px;
-    margin: 0px auto;
-    text-align: center;
 }
 
-.test1 img {
-    border-radius: 5px;
-    display: block;
-    margin: 5px auto;
+.card h2 {
+    font-size: 15px;
+    text-decoration: underline;
+    width: 33%;
 }
 
-.test1 input{
-    display: block;
-    margin: 5px auto;    
-    border: 0px;
-    width: 300px;
-    border-radius: 5px;
-    box-shadow: -6px 6px 10px rgba(255, 103, 0, 0.3), 6px -6px 10px rgba(231, 190, 163, 0.3);
-}
-
-.test1 button {
-    display: block;
-    margin: 5px auto;
-    display: block;
-    width: 150px;
-    border: 0px;
-    border-radius: 5px;
-    color: #FFFF;
-    background-color: #FF6700;
-}
-
-.test1 p {
-    margin-top: 15px;
-    font-size: 8px;
-    color: #FF6700;
+.card p {
+    width: 33%;
 }
